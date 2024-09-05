@@ -1,0 +1,117 @@
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #256252;
+    padding: 10px 90px;
+}
+
+.nav img {
+    width: 200px;
+    cursor: pointer;
+}
+
+.nav-list ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-list ul li {
+    list-style: none;
+}
+
+.nav-list ul li a {
+    text-decoration: none;
+    position: relative;
+    color: #EBBD7C;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.nav-list ul li:nth-child(5) {
+    display: none;
+}
+
+.nav-list ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 100%;
+    height: 3px;
+    background-color: #EBBD7C;
+    border-radius: 2px;
+    transform: scale(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.nav-list ul li a:hover:after {
+    transform: scale(1);
+    transform-origin: bottom left;
+}
+
+.nav-list ul .btn {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-list ul .btn button {
+    background-color: #EBBD7C;
+    border: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.nav-list ul .btn button:hover {
+    transition: transform 0.3s ease-out;
+    transform: scale(1.2);
+}
+
+@media only screen and (max-width: 600px) {
+    .nav {
+        padding: 5px 40px;
+    }
+    .nav-list ul .btn {
+        gap: 10px;
+    }
+
+    .nav-list ul li a {
+        display: none;
+    }
+
+    .nav-list ul .btn button {
+        font-size: 0.5rem;
+        padding: 5px 5px;
+        border-radius: 3px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .nav {
+        padding: 5px 30px;
+    }
+    .nav img {
+        width: 130px;
+    }
+    .nav-list ul .btn {
+        gap: 10px;
+    }
+
+    .nav-list ul li a {
+    font-size: 10px;
+    }
+
+    .nav-list ul .btn button {
+        font-size: 0.5rem;
+        padding: 5px 5px;
+        border-radius: 3px;
+    }
+}
